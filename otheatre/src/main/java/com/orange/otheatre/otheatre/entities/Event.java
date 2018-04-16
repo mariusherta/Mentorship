@@ -1,4 +1,4 @@
-package com.orange.otheatre.otheatre.beans;
+package com.orange.otheatre.otheatre.entities;
 
 import java.io.Serializable;
 import java.util.Date;

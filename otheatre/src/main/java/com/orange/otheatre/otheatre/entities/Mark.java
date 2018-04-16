@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.orange.otheatre.otheatre.beans;
+package com.orange.otheatre.otheatre.entities;
 
-/**
- *
- * @author Shedzuke
- */
-public class Guest {
+public enum Mark {
+    AWFUL, BAD, ACCEPTABLE, GOOD, EXCELLENT
+
     
 }

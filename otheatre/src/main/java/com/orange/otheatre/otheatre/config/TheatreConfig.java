@@ -9,10 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 
-/**
- *
- * @author Shedzuke
- */
 @org.springframework.context.annotation.Configuration
 @org.springframework.context.annotation.ComponentScan(value = {"com.orange.otheatre.*"})
 @org.springframework.transaction.annotation.EnableTransactionManagement

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.orange.otheatre.otheatre.beans;
+package com.orange.otheatre.otheatre.entities;
 
 import java.util.List;
 import javax.persistence.Entity;
@@ -12,10 +12,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-/**
- *
- * @author Shedzuke
- */
 @Entity
 public class TheatreParticipant {
 

@@ -5,7 +5,7 @@
  */
 package com.orange.otheatre.otheatre.service;
 
-import com.orange.otheatre.otheatre.beans.Event;
+import com.orange.otheatre.otheatre.entities.Event;
 import com.orange.otheatre.otheatre.repositories.EventRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author Shedzuke
+ * @author Marius Herta <marius.herta@gmail.com>
  */
 @Service
 public class EventService {
