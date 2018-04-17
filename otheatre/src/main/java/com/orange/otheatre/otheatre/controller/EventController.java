@@ -9,6 +9,8 @@ import com.orange.otheatre.otheatre.entities.Event;
 import com.orange.otheatre.otheatre.service.EventService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,11 +22,13 @@ public class EventController {
     @Autowired
     EventService eventService;
 
+    @PreAuthorize("hasAnyRole('THEATRE_PLAY_ORGANIZER')")
     @RequestMapping(method = RequestMethod.POST, path = {"/addevent"})
     public boolean addEvent(@RequestBody Event event) {
         
        return eventService.addEvent(event);
     }
+    
     
     @RequestMapping(method = RequestMethod.GET, path = "/getevents")
     public List<Event> getEvents(){

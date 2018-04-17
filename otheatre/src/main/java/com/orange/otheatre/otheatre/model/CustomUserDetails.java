@@ -6,8 +6,13 @@
 package com.orange.otheatre.otheatre.model;
 
 import com.orange.otheatre.otheatre.entities.User;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
@@ -17,13 +22,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class CustomUserDetails extends User implements UserDetails{
 
     public CustomUserDetails(User user) {
+        super(user);
     }
     
     
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<SimpleGrantedAuthority> rolesList = 
+                Arrays.stream(UserRole.values())
+                .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                .collect(Collectors.toList());        
+        return rolesList;
     }
 
     @Override

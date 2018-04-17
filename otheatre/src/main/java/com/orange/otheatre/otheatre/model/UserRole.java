@@ -8,5 +8,5 @@ package com.orange.otheatre.otheatre.model;
 public enum UserRole{
     THEATRE_PARTICIPANT,
     THEATRE_ADMIN,
-    TREATHE_PLAY_ORGANIZER;
+    THEATRE_PLAY_ORGANIZER;
     }
