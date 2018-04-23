@@ -10,3 +10,4 @@ public enum UserRole{
     THEATRE_ADMIN,
     THEATRE_PLAY_ORGANIZER;
     }
+
